@@ -1,0 +1,264 @@
+/* GOOGLE RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f8f9fc;
+    color:#222;
+    line-height:1.7;
+}
+
+/* COLORS */
+
+:root{
+    --navy:#0B1F3A;
+    --royal:#163A6B;
+    --gold:#D4AF37;
+    --white:#ffffff;
+    --light:#F5F6FA;
+    --gray:#666;
+}
+
+/* NAVBAR */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:var(--navy);
+    box-shadow:0 3px 10px rgba(0,0,0,.2);
+}
+
+.navbar{
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo{
+    color:var(--gold);
+    font-size:28px;
+    font-weight:700;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active{
+    color:var(--gold);
+}
+
+/* HERO */
+
+.hero{
+    width:90%;
+    margin:auto;
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h3{
+    color:var(--gold);
+    font-size:22px;
+}
+
+.hero-text h1{
+    font-size:60px;
+    color:var(--navy);
+    margin:10px 0;
+}
+
+.hero-text h2{
+    color:var(--royal);
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    color:#555;
+    max-width:600px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    background:var(--gold);
+    color:var(--navy);
+    padding:12px 28px;
+    border-radius:40px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+    border:2px solid transparent;
+}
+
+.btn:hover{
+    background:var(--navy);
+    color:white;
+    border:2px solid var(--gold);
+}
+
+/* HERO IMAGE */
+
+.hero-image{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.hero-image img{
+    width:340px;
+    height:340px;
+    object-fit:cover;
+    border-radius:50%;
+    border:8px solid var(--gold);
+    box-shadow:0 15px 40px rgba(0,0,0,.2);
+}
+
+/* SECTIONS */
+
+section{
+    padding:80px 10%;
+}
+
+section h2{
+    text-align:center;
+    font-size:36px;
+    color:var(--navy);
+    margin-bottom:35px;
+    position:relative;
+}
+
+section h2::after{
+    content:"";
+    width:80px;
+    height:4px;
+    background:var(--gold);
+    display:block;
+    margin:12px auto;
+}
+
+/* PARAGRAPHS (general improvement) */
+
+section p{
+    color:#555;
+}
+
+/* ABOUT */
+
+.about p{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    font-size:18px;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+}
+
+/* IMPORTANT FIX: make cards more clickable-looking */
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+    border:1px solid transparent;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    border:1px solid var(--gold);
+    box-shadow:0 12px 25px rgba(0,0,0,.12);
+}
+
+.card h3{
+    color:var(--royal);
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#666;
+    font-size:15px;
+}
+
+/* FIX for clickable cards (important for your new links) */
+
+.cards a.card{
+    text-decoration:none;
+    color:inherit;
+    display:block;
+}
+
+/* FOOTER */
+
+footer{
+    background:var(--navy);
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:50px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.hero{
+    flex-direction:column-reverse;
+    text-align:center;
+    padding-top:30px;
+}
+
+.hero-text h1{
+    font-size:42px;
+}
+
+.hero-image img{
+    width:260px;
+    height:260px;
+}
+
+.navbar{
+    flex-direction:column;
+    gap:20px;
+}
+
+.nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+}
